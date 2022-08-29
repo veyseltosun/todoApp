@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.no{
+    text-decoration: none;
+
+
+}
+
+.yes{
+    text-decoration: line-through;
+  }
