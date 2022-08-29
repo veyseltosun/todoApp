@@ -13,7 +13,27 @@ const Button = () =>{
     
     const[todos, setTodos] = useState(initalState);
     const[newTodo, setNewTodo] = useState('')
-    console.log(newTodo)
+    
+
+    const addNewTodo = () =>{
+        setTodos([...todos,{id: Date.now(), header: newTodo, done:false}]);
+             setNewTodo('');
+
+    }
+
+    const clear = () =>{
+        setTodos(todos.filter(item => !item.done))
+    }
+
+    const markCompleted = (id) =>{
+        setTodos(
+            todos.map(item =>
+                item.id === id ? {...item, done : !item.done} :item)
+        )
+        }
+
+
+
  return (
 
     <div className="Button">
@@ -22,25 +42,14 @@ const Button = () =>{
             <input value={newTodo}
             onChange={e =>setNewTodo(e.target.value)}
              placeholder="listeye ekle" />
-            <button onClick={() => 
-                setTodos([
-                    ...todos,
-                     {id: Date.now(), header: newTodo, done:false}
-                     ])}>
-                        Ekle
-                        </button>
+            <button onClick={ addNewTodo}> Ekle </button>
         </div>
         <div className="liste">
             {todos.map((todo,index) =>(
-                <div key={index} onClick={() =>{
-                    setTodos(
-                        todos.map(item=>
-                            item.id === todo.id ? {...item, done : !item.done} :item)
-                    )
-                }} className={todo.done ? 'yes' : 'no'}>{todo.header}</div>
+                <div key={index} onClick={() =>markCompleted(todo.id)} className={todo.done ? 'yes' : 'no'}>{todo.header}</div>
             ))}
         </div>
-        <button className="temizle">Tamamlananları Temizle</button>
+        <button  onClick={clear}  className="temizle">Tamamlananları Temizle</button>
     </div>
     
     
