@@ -41,7 +41,7 @@ const Button = () =>{
         <div className="input-form-container">
             <input className="input-form" value={newTodo}
             onChange={e =>setNewTodo(e.target.value)}
-             placeholder="listeye ekle" />
+             placeholder=" listeye ekle..." />
             <button className="btn-list-add" onClick={ addNewTodo}> Add </button>
         </div>
         <div className="list">

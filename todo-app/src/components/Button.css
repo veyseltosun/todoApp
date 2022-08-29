@@ -9,8 +9,8 @@ body{
 .Button{
     background-color: rgba(0, 0, 0, 0.2);
     height: 100%;
-    margin:40px;
-    padding: 20px 10px;
+    margin:40px 50px;
+    padding: 20px 100px;
     border-radius: 5px;
     
 }
@@ -22,13 +22,15 @@ h1{
     margin: 10px;
     background-color:antiquewhite;
     border-radius: 3px;
+    padding: 10px 30px;
+    
 }
 
 .input-form-container{
     
 }
 .input-form{
-    color: beige;
+    
     margin: 5px;
     padding: 10px 20px;
     width: fit-content;
@@ -50,6 +52,28 @@ h1{
     color: wheat;
 }
 
+.list{
+    background-color:bisque;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.btn-clear{
+    color: black;
+    background-color: brown;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 7px;
+    cursor:pointer;
+
+}
+.btn-clear:hover{
+    background-color: aquamarine;
+    opacity: 0.3;
+
+}
+
 
 
 
@@ -61,4 +85,5 @@ h1{
 
 .yes{
     text-decoration: line-through;
+   
 }
