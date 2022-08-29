@@ -4,8 +4,8 @@ import './Button.css'
 
 
 const initalState = [
-    {id: 1, header: 'do shopping ', done: false},
-    {id: 2, header: 'pay the bills', done: false}
+    {id: 1, header: 'Do shopping ! ', done: false},
+    {id: 2, header: 'Pay the bills...!', done: false}
 ];
 
 const Button = () =>{
