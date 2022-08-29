@@ -37,19 +37,19 @@ const Button = () =>{
  return (
 
     <div className="Button">
-        <h1> Yapılacaklar Listesi</h1>
-        <div className="input-formu">
-            <input value={newTodo}
+        <h1> ToDo List </h1>
+        <div className="input-form-container">
+            <input className="input-form" value={newTodo}
             onChange={e =>setNewTodo(e.target.value)}
              placeholder="listeye ekle" />
-            <button onClick={ addNewTodo}> Ekle </button>
+            <button className="btn-list-add" onClick={ addNewTodo}> Add </button>
         </div>
-        <div className="liste">
+        <div className="list">
             {todos.map((todo,index) =>(
                 <div key={index} onClick={() =>markCompleted(todo.id)} className={todo.done ? 'yes' : 'no'}>{todo.header}</div>
             ))}
         </div>
-        <button  onClick={clear}  className="temizle">Tamamlananları Temizle</button>
+        <button  onClick={clear}  className="btn-clear">Clear Dones</button>
     </div>
     
     

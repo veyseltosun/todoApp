@@ -3,6 +3,56 @@
     padding: 0;
 }
 
+body{
+    background-color:bisque;
+}
+.Button{
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    margin:40px;
+    padding: 20px 10px;
+    border-radius: 5px;
+    
+}
+
+h1{
+    color: blueviolet;
+    
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px;
+    background-color:antiquewhite;
+    border-radius: 3px;
+}
+
+.input-form-container{
+    
+}
+.input-form{
+    color: beige;
+    margin: 5px;
+    padding: 10px 20px;
+    width: fit-content;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.btn-list-add{
+    color: white;
+    background-color: salmon;
+    border: none;
+    margin: 3px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-list-add:hover{
+    background-color:blueviolet;
+    color: wheat;
+}
+
+
+
+
 .no{
     text-decoration: none;
 
@@ -11,4 +61,4 @@
 
 .yes{
     text-decoration: line-through;
-  }
+}
