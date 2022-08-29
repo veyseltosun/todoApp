@@ -22,14 +22,20 @@ const Button = () =>{
             <input value={newTodo}
             onChange={e =>setNewTodo(e.target.value)}
              placeholder="listeye ekle" />
-            <button>Ekle</button>
+            <button onClick={() => 
+                setTodos([
+                    ...todos,
+                     {id: Date.now(), header: newTodo, done:false}
+                     ])}>
+                        Ekle
+                        </button>
         </div>
         <div className="liste">
             {todos.map((todo,index) =>(
                 <div key={index} onClick={() =>{
                     setTodos(
-                        todos.map(item =>
-                            item.id === item.id ? {...item, done : !item.done} :item)
+                        todos.map(item=>
+                            item.id === todo.id ? {...item, done : !item.done} :item)
                     )
                 }} className={todo.done ? 'yes' : 'no'}>{todo.header}</div>
             ))}
